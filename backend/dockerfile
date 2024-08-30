@@ -4,12 +4,15 @@ RUN apk add --no-cache ffmpeg
 
 WORKDIR /home/app
 
-COPY package*.json ./
+# Copy the entire backend directory
+COPY . .
 
+# Install dependencies
 RUN npm install
 
-COPY . .
+# Verify installation of express
+RUN npm list express
 
 EXPOSE 3001
 
-CMD ["npm", "start"]
+CMD ["node", "index.js"]

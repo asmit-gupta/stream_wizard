@@ -1,7 +1,7 @@
-import http from 'http'
-import express from 'express'
-import { spawn } from 'child_process'
-import { Server as SocketIo } from 'socket.io'
+import express from 'express';
+import http from 'http';
+import { Server as SocketIo } from 'socket.io';
+import { spawn } from 'child_process';
 
 const app = express();
 const server = http.createServer(app);
