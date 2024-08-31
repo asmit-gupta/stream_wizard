@@ -1,0 +1,2 @@
+docker command to start sever: docker-compose up --build
+*docker desktop must be running for this
